@@ -23,6 +23,21 @@ Branch the current Copilot CLI session, creating a new session that inherits con
 - Optional truncation ("branch from N turns ago")
 - Optional git worktree integration
 
+### odt-convert
+
+Convert ODT (OpenDocument Text) files to Markdown with full comment and embedded object extraction.
+
+**Trigger phrases:** "convert odt", "extract odt comments", "odt to markdown", or when working with `.odt` files
+
+**Features:**
+- Document body conversion via `pandoc` with `--wrap=none`
+- Threaded comment extraction with anchor text and reply grouping
+- Inline image extraction (fixes pandoc `[]{.image}` placeholder failures)
+- Visio diagram extraction (`.vsdx`) with PNG preview generation
+- All media output to a `<name>-embedded/` subdirectory
+
+**Requirements:** `pandoc`, Python 3. Optional: `olefile` (Visio), `libreoffice` (EMF→PNG).
+
 ## License
 
 MIT
