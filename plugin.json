@@ -7,6 +7,6 @@
     { "name": "Erdem Tuna", "url": "https://github.com/erdemtuna" }
   ],
   "license": "MIT",
-  "keywords": ["copilot", "skills", "code-review", "session"],
+  "keywords": ["copilot", "skills", "structural-code-review", "session"],
   "skills": "skills/"
 }

@@ -1,8 +1,9 @@
 ---
-name: code-review
+name: structural-code-review
 description: >
-  Reviews code for quality, correctness, and adherence to software engineering best practices
-  including type safety, DRY, clean code, SOLID principles, error handling, and performance.
+  Reviews code for structural quality, correctness, and adherence to software engineering
+  best practices including type safety, DRY, clean code, SOLID principles, error handling,
+  injection vulnerabilities, and performance.
   Use this skill whenever the user asks you to review code, check code quality, audit code,
   find code smells, evaluate a pull request, review a diff, critique code, suggest improvements
   to code, or check for clean code violations. Also trigger when users say things like
