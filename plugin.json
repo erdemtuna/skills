@@ -1,11 +1,12 @@
 {
-  "name": "lossyrob-skills",
-  "description": "Reusable Copilot CLI skills by lossyrob",
-  "version": "0.1.0",
-  "author": {
-    "name": "Rob Emanuele"
-  },
+  "name": "erdemtuna-skills",
+  "description": "Reusable Copilot CLI skills by erdemtuna",
+  "version": "0.2.0",
+  "author": [
+    { "name": "Rob Emanuele", "url": "https://github.com/lossyrob" },
+    { "name": "Erdem Tuna", "url": "https://github.com/erdemtuna" }
+  ],
   "license": "MIT",
-  "keywords": ["copilot", "skills", "session"],
+  "keywords": ["copilot", "skills", "code-review", "session"],
   "skills": "skills/"
 }

@@ -1,42 +1,20 @@
-# lossyrob-skills
+# skills
 
-Reusable [Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli) skills.
+Reusable [Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli) skills. Forked from [lossyrob/skills](https://github.com/lossyrob/skills).
 
 ## Install
 
 ```bash
-copilot plugin install lossyrob/skills
+copilot plugin install erdemtuna/skills
 ```
 
 ## Skills
 
-### session-branch
-
-Branch the current Copilot CLI session, creating a new session that inherits conversation history up to the current point while preserving the original session intact. Useful for experimentation or parallel development without losing your place.
-
-**Trigger phrases:** "branch", "branch session", "fork session", "create a branch from here"
-
-**Features:**
-- Copies full session state (events, workspace config)
-- Tracks lineage via `branch_of` / `branch_note` in `workspace.yaml`
-- Resets checkpoints and rewind snapshots for a clean slate
-- Optional truncation ("branch from N turns ago")
-- Optional git worktree integration
-
-### odt-convert
-
-Convert ODT (OpenDocument Text) files to Markdown with full comment and embedded object extraction.
-
-**Trigger phrases:** "convert odt", "extract odt comments", "odt to markdown", or when working with `.odt` files
-
-**Features:**
-- Document body conversion via `pandoc` with `--wrap=none`
-- Threaded comment extraction with anchor text and reply grouping
-- Inline image extraction (fixes pandoc `[]{.image}` placeholder failures)
-- Visio diagram extraction (`.vsdx`) with PNG preview generation
-- All media output to a `<name>-embedded/` subdirectory
-
-**Requirements:** `pandoc`, Python 3. Optional: `olefile` (Visio), `libreoffice` (EMF→PNG).
+| Skill | Description | Triggers | Requirements |
+|-------|-------------|----------|--------------|
+| [**code-review**](skills/code-review/SKILL.md) | Reviews code against 7 quality dimensions: type safety, DRY, clean code, SOLID, error handling, injection vulnerabilities, and performance. Outputs structured findings with severity levels (🔴 Must Fix · 🟡 Should Fix · 🔵 Consider). | `review code`, `check my PR`, `code quality`, `is this code good?` | — |
+| [**session-branch**](skills/session-branch/SKILL.md) | Branch the current session, creating a new one that inherits conversation history while preserving the original. Supports optional truncation and git worktree integration. | `branch`, `branch session`, `fork session` | — |
+| [**odt-convert**](skills/odt-convert/SKILL.md) | Convert ODT files to Markdown with comment extraction, inline images, and Visio diagram support. | `convert odt`, `odt to markdown`, working with `.odt` files | `pandoc`, Python 3 |
 
 ## License
 
